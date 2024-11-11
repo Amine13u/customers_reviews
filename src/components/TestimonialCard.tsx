@@ -2,7 +2,7 @@ import user from "../assets/images/estelle.png";
 
 const TestimonialCard = ({ rating = 3, name = "John D.", image = user }) => {
   return (
-    <div className="col-12 col-sm-6 col-md-4 text-center">
+    <div className="text-center">
       <div className="card border-0 shadow-sm text-center">
         <div className="card-body  my-5 mx-4">
           <blockquote className="card-text">
@@ -30,6 +30,7 @@ const TestimonialCard = ({ rating = 3, name = "John D.", image = user }) => {
             className={`fas fa-star mr-1 ${
               index < rating ? "text-warning" : "text-muted"
             }`}
+            aria-hidden="true"
           ></i>
         ))}
       </div>

@@ -1,6 +1,14 @@
 import reviews from "../assets/images/reviews.png";
 
 const HeroSection = () => {
+  const scrollToTestimonials = () => {
+    const testimonialsSection = document.querySelector("#testimonials");
+
+    testimonialsSection?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="mx-0 mx-sm-4 mx-lg-0">
       <div className="container-lg">
@@ -16,6 +24,7 @@ const HeroSection = () => {
               type="button"
               className="btn btn-primary"
               aria-label="Lire les avis"
+              onClick={scrollToTestimonials}
             >
               Lire les avis
             </button>
