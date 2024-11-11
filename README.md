@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# Customer Reviews App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A streamlined customer reviews application built with **React** and **Vite**. This project leverages **Bootstrap** for responsive and modern styling, and dynamically consumes data from a PHP-based API.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Follow the steps below to set up and run the application locally.
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Node.js** 
+- **PHP**
+- **NPM** or **Yarn** 
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To set up and run this application locally, follow these steps:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Clone the repository**:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```
+   git clone https://github.com/yourusername/customers_reviews.git
+   cd customers_reviews
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Install dependencies**:
+
+    - Using npm:
+
+      ```
+      npm install
+
+    - Or using yarn:
+
+      ```
+      yarn install
+
+3. **Set up environment variables**:
+
+    - Create a `.env` file in the root of the project and add the following:
+
+      ```
+      VITE_API_URL=http://localhost:8000
+
+4. **Run the development server**:
+
+    - Using npm:
+
+      ```
+      npm run serve
+
+    - Or using yarn:
+
+      ```
+      yarn serve
+
+5. **Open the application**:
+
+    - Visit [http://localhost:5173](http://localhost:5173) in your browser to view the app.
