@@ -1,6 +1,11 @@
 import reviews from "../assets/images/reviews.png";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  averageRate: number;
+  reviewsCount: number;
+}
+
+const HeroSection = ({ averageRate, reviewsCount }: HeroSectionProps) => {
   const scrollToTestimonials = () => {
     const testimonialsSection = document.querySelector("#testimonials");
 
@@ -17,8 +22,10 @@ const HeroSection = () => {
             <h2 className="font-weight-bold">Ils nous font confiance</h2>
             <p className="mx-5 mx-md-0">
               Nous sommes fiers d'avoir obtenu une note moyenne de
-              <span className="text-danger font-weight-bolder m-1">N/5</span> au
-              travers de X témoigniages.
+              <span className="text-danger font-weight-bolder m-1">
+                {averageRate}/5
+              </span>
+              au travers de {reviewsCount} témoigniages.
             </p>
             <button
               type="button"

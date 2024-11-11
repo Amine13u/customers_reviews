@@ -1,16 +1,23 @@
 import user from "../assets/images/estelle.png";
 
-const TestimonialCard = ({ rating = 3, name = "John D.", image = user }) => {
+interface TestimonialCardProps {
+  rating: number;
+  name: string;
+  description: string;
+  image?: string;
+}
+
+const TestimonialCard = ({
+  rating,
+  name,
+  description,
+  image = user,
+}: TestimonialCardProps) => {
   return (
-    <div className="text-center">
-      <div className="card border-0 shadow-sm text-center">
-        <div className="card-body  my-5 mx-4">
-          <blockquote className="card-text">
-            « Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque ut elit id mi facilisis posuere. Cras lectus nisi,
-            blandit ac ante in, hendrerit commodo odio. Nunc sit amet enim
-            sapien. »
-          </blockquote>
+    <div className="text-center d-flex flex-column h-100">
+      <div className="card border-0 shadow-sm text-center h-100">
+        <div className="card-body my-5 mx-4 flex-grow-1 align-content-center">
+          <blockquote className="card-text">« {description} »</blockquote>
         </div>
       </div>
 
